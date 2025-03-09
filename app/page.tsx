@@ -107,7 +107,7 @@ export default function Home() {
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-3xl font-bold">Productos Destacados</h2>
               <Button variant="ghost" className="gap-1" onClick={() => handleFeatureClick("View all products")}>
-                View All <ChevronRight className="h-4 w-4" />
+                Ver todos <ChevronRight className="h-4 w-4" />
               </Button>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -253,6 +253,7 @@ export default function Home() {
           <div className="container">
             <h2 className="text-3xl font-bold text-center mb-12">Visítanos</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {/* Contact Information */}
               <div className="bg-muted rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-4">Información de Contacto</h3>
                 <div className="space-y-4">
@@ -276,11 +277,20 @@ export default function Home() {
                   <p>Domingo: 11am - 5pm</p>
                 </div>
               </div>
-              <div className="rounded-lg overflow-hidden h-[300px] bg-muted flex items-center justify-center">
-                <div className="text-center p-6">
-                  <h3 className="text-xl font-bold mb-2">Ubicación de la Tienda</h3>
-                  <p className="text-muted-foreground mb-4">Aquí se mostraría un mapa interactivo</p>
-                  <Button onClick={() => handleFeatureClick("Indicaciones en el mapa")}>Obtener Indicaciones</Button>
+
+              {/* Map */}
+              <div className="rounded-lg overflow-hidden h-[300px]">
+                <div className="w-full h-full">
+                  <iframe
+                    title="Google Maps location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d407.4473394989591!2d-89.22075398308014!3d13.69941044768832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6330439d7bb9c9%3A0x15c92c75a219c371!2sEdificio%20de%20Bibliotecas%20y%20Laboratorios%20Especializados!5e0!3m2!1ses-419!2ssv!4v1741558021793!5m2!1ses-419!2ssv"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
               </div>
             </div>
